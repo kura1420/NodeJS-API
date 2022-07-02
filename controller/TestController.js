@@ -1,4 +1,5 @@
 const _api = require("../config/api")
+const _logger = require('../library/logger')
 
 exports.index = async (req, res, next) => {
     try {
@@ -13,6 +14,8 @@ exports.index = async (req, res, next) => {
             .status(status)
             .json(data)
     } catch (error) {
+        _logger.write(__filename, 'error', next)
+
         next(error)
     }
 }
@@ -35,6 +38,8 @@ exports.store = async (req, res, next) => {
             .status(status)
             .json(data)
     } catch (error) {
+        _logger.write(__filename, 'error', next)
+
         next(error)
     }
 }
@@ -54,6 +59,8 @@ exports.show = async (req, res, next) => {
             .status(status)
             .json(data)
     } catch (error) {
+        _logger.write(__filename, 'error', next)
+
         next(error)
     }
 }
@@ -78,6 +85,8 @@ exports.put = async (req, res, next) => {
             .status(status)
             .json(data)
     } catch (error) {
+        _logger.write(__filename, 'error', next)
+
         next(error)
     }
 }
@@ -97,6 +106,8 @@ exports.delete = async (req, res, next) => {
             .status(status)
             .json(data)
     } catch (error) {
+        _logger.write(__filename, 'error', next)
+
         next(error)
     }
 }

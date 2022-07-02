@@ -1,6 +1,6 @@
 # Dependency directories
 node_modules/
-storages/
+/storage/*.key
 
 # Optional npm cache directory
 .npm
