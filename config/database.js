@@ -7,7 +7,7 @@ const {
     DB_PASS,
 } = process.env
 
-const pg_pool = new Pool({
+const _pg_pool = new Pool({
     host: DB_HOST,
     port: DB_PORT,
     database: DB_NAME,
@@ -15,4 +15,4 @@ const pg_pool = new Pool({
     password: DB_PASS,
 })
 
-module.exports = pg_pool
+module.exports = _pg_pool
